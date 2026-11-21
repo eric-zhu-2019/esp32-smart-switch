@@ -1,0 +1,28 @@
+Socket enclosure reinforcement validation - 2026-11-20
+
+Scope: earlier SCHURTER / Interpower reference connector geometry only.
+Amazon B0FFS5SBZZ / B07WV7MTQH cutouts remain pending verified dimensions.
+System browser tool reported no connected browsers.
+
+All four STL exports: closed, connected, consistently wound;
+no degenerate triangles; positive volume. OpenSCAD --hardwarnings exports passed.
+Base: 200 x 180 x 70 mm, 12576 triangles, 417.46 cm3.
+Lid: 200 x 180 x 5 mm, 1660 triangles, 109.74 cm3.
+Guard: 144.6 x 167.2 x 2.4 mm, 1308 triangles, 57.86 cm3.
+Coupon: 136 x 30 x 70 mm, 2220 triangles, 65.44 cm3.
+All fit conservative 250 x 250 x 250 mm print envelope individually.
+
+Reinforcement: 4 mm walls/floor; 62 mm square, 6 mm thick mounting panels;
+two 4 mm gussets per connector, 24 mm inward foot depth, top at z=60;
+7 mm wide by 4 mm high continuous top rim. Matching lid lip inset changed.
+
+OpenSCAD intersection of base with assembled guard / assembled lid: empty.
+0.001 mm vertical lift excludes intentional seating-plane contact.
+0.4 mm guard edge clearance avoids coincident reinforcement-pad faces.
+Run check_socket_clearance.scad to repeat; an empty STL exits 1 with
+"Current top level object is empty." This is the expected result.
+
+Preview images inspected. No physical print, connector installation,
+mechanical-load test, mains wiring, thermal test or electrical validation done.
+Load targets, cycle count, final filament and selected connector hardware pending.
+No force rating or mains suitability is asserted.
